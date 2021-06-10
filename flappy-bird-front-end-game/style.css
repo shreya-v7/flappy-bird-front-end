@@ -1,39 +1,78 @@
-* {
-    margin: 0;
+  
+*{
     padding: 0;
+    margin: 0;
 }
+
 
 body {
-    background: linear-gradient(to bottom, black, grey);
+	background: black;
 }
 
-.container {
-    width: 600px;
+#container{
+    width: 400px;
     height: 500px;
-    border: 2px solid yellow;
     margin: auto;
     overflow: hidden;
 }
-
-.block {
+#bars{
     width: 50px;
     height: 500px;
-    background: linear-gradient(to bottom, red, blue);
+    background: linear-gradient(to bottom, red, orange);
     position: relative;
     left: 400px;
-    animation: block 2s infinite linear;
+    animation: bars 2s infinite linear;
 }
-
-@keyframes block {
+@keyframes bars{
     0%{left:400px}
-    100%{left:-50px}    
+    100%{left:-50px}
 }
-
-.hole {
+#space{
     width: 50px;
     height: 150px;
-    background: none;
+    background: linear-gradient(to bottom, pink, white);
+    position: relative;
     left: 400px;
     top: -500px;
-    animation: block 2s infinite linear;
+    animation: bars 2s infinite linear;
 }
+#character{
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(to bottom, pink, white);
+    position: absolute;
+    top: 100px;
+    border-radius: 50%;
+}
+
+
+  .bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, rgb(10, 10, 10) 50%, rgb(61, 57, 61) 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+  }
+  
+  .bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+  }
+  
+  .bg3 {
+    animation-duration:5s;
+  }
+  
+  
+  @keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+  }
