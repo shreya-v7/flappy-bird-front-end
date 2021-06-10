@@ -2,4 +2,4 @@
 
 index.html || style.css || script.js 
 
-\<site will be hosted soon>
+\<https://flappy-bird-front-end.netlify.app/>
